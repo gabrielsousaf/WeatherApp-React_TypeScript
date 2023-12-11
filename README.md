@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+<h1 align="center" width:100%>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Home - Google Chrome 2023-08-28 20-08-01-min](https://github.com/gabrielsousaf/Movies-Lib/assets/121953504/8c1b9793-04db-45c3-83e0-153a7baf0b60)
+![Design_sem_nome__2_-removebg-preview](https://github.com/gabrielsousaf/Movies-Lib/assets/121953504/a90a4353-7d3a-41d8-9602-bd18c60bd0ba)
 
-## Available Scripts
 
-In the project directory, you can run:
+# 📱 Movies-Lib-React.
+> * Esse repositório tem como objetivo principal apresentar meus estudos e aplicar em projetos pessoais em React.
+> * Projeto que utiliza a APi TMDB para informações de filmes.
+  
 
-### `npm start`
+## ⚙ Descrição do projeto.
+> * Configuração de rotas usando o React Router Dom.
+> * Menu Mobile e responsividade.
+> * Página de Erro 404: Esta página é renderizada quando o usuário acessa uma rota que não corresponde a nenhuma das rotas definidas no projeto.
+> * Utilização da API externa TMDB.
+> * Funcionalidade de busca de filmes.
+> * Exibição dos atores, equipe do filme, recomendações de filmes de acordo com o atual e galeria de imagens.
+> * Utilização do React Carousel que auxilia na criação de carrosséis.
+ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ☕ Tecnologias Usadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![REACT](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+
+https://movies-lib-gabrielsousaf.vercel.app/
+
+
+
+## 📎 Como Executar o projeto.
+
+No diretório do projeto, você pode executar:
+
+## `npm i`:
+> Instalar as dependências listadas no arquivo package.json do projeto.
+
+## `npm start`: 
+> Executa o aplicativo em modo de desenvolvimento.
+> Abra http://localhost:5173/ para visualizá-lo no navegador.
+> A página será recarregada quando você fizer alterações.
+> Você também pode ver quaisquer erros de lint no console.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Inicia o executor de teste no modo de observação interativo.
+> Consulte a seção sobre executando testes para obter mais informações.
 
 ### `npm run build`
+> Compila o aplicativo para produção na pasta build.
+> Ele agrupa corretamente o React no modo de produção e otimiza a construção para obter o melhor desempenho.
+   
+## 📝 Licença
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE) para mais detalhes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
