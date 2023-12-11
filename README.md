@@ -4,7 +4,7 @@
 ![Design_sem_nome__2_-removebg-preview](https://github.com/gabrielsousaf/Movies-Lib/assets/121953504/a90a4353-7d3a-41d8-9602-bd18c60bd0ba)
 
 
-# 📱 Movies-Lib-React.
+# 📱 Weather-app.
 > * Esse repositório tem como objetivo principal apresentar meus estudos e aplicar em projetos pessoais em React.
 > * Projeto que utiliza a APi TMDB para informações de filmes.
   
@@ -25,6 +25,8 @@
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
 [![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
 [![REACT](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+[![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+)](#)
 
 https://movies-lib-gabrielsousaf.vercel.app/
 
