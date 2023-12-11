@@ -1,0 +1,171 @@
+.main {
+  width: 60%;
+  background: linear-gradient(to right, #c7c7eb, #ccf2dd);
+  background-color: #ffffff7d;
+  border-radius: 12px;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: overlay;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.searchArea {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.searchArea > input {
+  outline: none;
+  border: none;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  background: transparent;
+}
+
+.searchCircle{
+  border: 1px solid grey;
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.searchIcon {
+  color: gray;
+  font-size: 20px;
+}
+
+.weatherArea {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.icon {
+  font-size: 9rem;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+span {
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.bottomInfoArea {
+  display: flex;
+  flex-flow:wrap ;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  -webkit-box-align: center;
+  background: linear-gradient(
+  90deg,
+  rgba(243, 255, 253, 1) 0%,
+  rgba(253, 255, 232, 1) 100%
+  );
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.humidityLevel,
+.wind,
+.sunset,
+.pressure {
+  display: flex;
+  margin: 10px 10px;
+  flex-direction: row;
+  justify-content: start;
+  -webkit-box-align: center;
+  align-items: center ;
+  text-align: center;
+}
+
+.windIcon {
+  font-size:2rem;
+}
+
+.loading {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}  
+
+.loadingIcon {
+  font-size: 3rem;
+  animation: spin 2s linear infinite;
+}
+
+.humidInfo{
+  margin: 15px;
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  from {
+  transform: rotate(0deg);
+  }
+  to {
+  transform: rotate(360deg);
+  }
+}
+
+
+@media(max-width:1200px) {
+  .main{
+    width: 90%;
+  }
+}
+
+
+@media(max-width: 769px) {
+  .humidityLevel,
+  .wind,
+  .sunset,
+  .pressure {
+    width: 90%;
+    text-align:justify;
+  }
+
+  .humidInfo{
+    margin-left: 2rem;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+
+}
