@@ -1,7 +1,7 @@
 <h1 align="center" width:100%>
 
 ![Home - Google Chrome 2023-08-28 20-08-01-min](https://github.com/gabrielsousaf/Movies-Lib/assets/121953504/8c1b9793-04db-45c3-83e0-153a7baf0b60)
-![Design_sem_nome__2_-removebg-preview](https://github.com/gabrielsousaf/Movies-Lib/assets/121953504/a90a4353-7d3a-41d8-9602-bd18c60bd0ba)
+![Design_sem_nome-removebg-preview](https://github.com/gabrielsousaf/WeatherApp-React_TypeScript/assets/121953504/65d3dfb9-1e20-42f4-b38f-d5183ca05814)
 
 
 # 📱 Weather-app.
