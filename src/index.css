@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-.hide {
-  display: none !important;
+body{
+  background: linear-gradient(rgb(255, 255, 255), rgb(186, 247, 255));
+  transition-property: background-color;
+  min-height: 100vh;
 }
-
