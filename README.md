@@ -10,13 +10,12 @@
   
 
 ## ⚙ Descrição do projeto.
-> * Configuração de rotas usando o React Router Dom.
-> * Menu Mobile e responsividade.
-> * Página de Erro 404: Esta página é renderizada quando o usuário acessa uma rota que não corresponde a nenhuma das rotas definidas no projeto.
-> * Utilização da API externa TMDB.
-> * Funcionalidade de busca de filmes.
-> * Exibição dos atores, equipe do filme, recomendações de filmes de acordo com o atual e galeria de imagens.
-> * Utilização do React Carousel que auxilia na criação de carrosséis.
+> * O usuário pode pesquisar o clima de uma cidade específica, utiliza a API OpenWeatherMap para obter dados em tempo real.
+> * Ao carregar a aplicação, ela obtém automaticamente a localização atual do usuário usando a API de geolocalização do navegador.
+> * Mostra informações como nome da cidade, país, temperatura atual, condição climática e ícone correspondente.
+> * Usa ícones dinâmicos para representar visualmente as condições climáticas atuais..
+> * Apresenta informações adicionais, como umidade, velocidade do vento, pressão atmosférica e horário do pôr do sol.
+> * A aplicação é responsiva, garantindo uma experiência de usuário consistente em dispositivos móveis e desktops.
  
 
 ## ☕ Tecnologias Usadas
