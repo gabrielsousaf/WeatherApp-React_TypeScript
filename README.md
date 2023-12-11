@@ -6,7 +6,7 @@
 
 # 📱 Weather-app.
 > * Esse repositório tem como objetivo principal apresentar meus estudos e aplicar em projetos pessoais em React.
-> * Projeto que utiliza a APi TMDB para informações de filmes.
+> * Projeto que utiliza a Weather API para informações do tempo.
   
 
 ## ⚙ Descrição do projeto.
@@ -28,7 +28,7 @@
 [![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 )](#)
 
-https://movies-lib-gabrielsousaf.vercel.app/
+https://weather-app-react-type-script.vercel.app/
 
 
 
@@ -41,7 +41,7 @@ No diretório do projeto, você pode executar:
 
 ## `npm start`: 
 > Executa o aplicativo em modo de desenvolvimento.
-> Abra http://localhost:5173/ para visualizá-lo no navegador.
+> Abra http://localhost:3000/ para visualizá-lo no navegador.
 > A página será recarregada quando você fizer alterações.
 > Você também pode ver quaisquer erros de lint no console.
 
