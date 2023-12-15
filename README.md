@@ -1,6 +1,6 @@
 <h1 align="center" width:100%>
 
-![2023-12-11 16-09-08](https://github.com/gabrielsousaf/WeatherApp-React_TypeScript/assets/121953504/f21d00ce-a348-4ffa-afcd-f6a82224ae7d)
+![2023-12-15 15-50-00](https://github.com/gabrielsousaf/WeatherApp-React_TypeScript/assets/121953504/be2207c1-e440-4279-8506-d0dadbb843b2)
 ![Design_sem_nome-removebg-preview](https://github.com/gabrielsousaf/WeatherApp-React_TypeScript/assets/121953504/65d3dfb9-1e20-42f4-b38f-d5183ca05814)
 
 
