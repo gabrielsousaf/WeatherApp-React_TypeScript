@@ -209,7 +209,7 @@ const DisplayWeather = () => {
       ) : (
         <div className={styles.loading}>
           <RiLoaderFill className={styles.loadingIcon} />
-          <p>Loading</p>
+          <p>Loading...</p>
         </div>
       )}
     </main>
