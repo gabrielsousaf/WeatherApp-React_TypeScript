@@ -1,7 +1,5 @@
-import React from "react";
-
+import { useState, useEffect } from "react";
 import styles from "./DisplayWeather.module.css";
-
 import { AiOutlineSearch } from "react-icons/ai";
 import { WiHumidity } from "react-icons/wi";
 import { SiWindicss } from "react-icons/si";
@@ -12,62 +10,26 @@ import {
   BsCloudFog2Fill,
 } from "react-icons/bs";
 import { FiSun, FiArrowRightCircle } from "react-icons/fi";
-
-
 import { RiLoaderFill } from "react-icons/ri";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import axios from "axios";
+import { fetchCurrentWeather, fetchWeatherData, formatSunsetTime } from "../utils/index";
+import { WeatherDataProps } from "../types/index";
 
-interface WeatherDataProps {
-  name: string;
-
-  main: {
-    temp: number;
-    humidity: number;
-    pressure: number;
-  };
-  sys: {
-    country: string;
-    sunrise: number;
-    sunset: number;
-  };
-  weather: {
-    main: string;
-  }[];
-  wind: {
-    speed: number;
-  };
-}
 
 const DisplayWeather = () => {
-  const api_key = "228cfefac5b85af9fc76719bc59ef9cd";
-  const api_Endpoint = "https://api.openweathermap.org/data/2.5/";
-
-  const [weatherData, setWeatherData] = React.useState<WeatherDataProps | null>(
+  const [weatherData, setWeatherData] = useState<WeatherDataProps | null>(
     null
   );
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const [searchCity, setSearchCity] = React.useState("");
+  const [searchCity, setSearchCity] = useState("");
 
-  const fetchCurrentWeather = async (lat: number, lon: number) => {
-    const url = `${api_Endpoint}weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric`;
-    const response = await axios.get(url);
-    return response.data;
-  };
-
-  const fetchWeatherData = async (city: string) => {
-    try {
-      const url = `${api_Endpoint}weather?q=${city}&appid=${api_key}&units=metric`;
-      const searchResponse = await axios.get(url);
-
-      const currentWeatherData: WeatherDataProps = searchResponse.data;
-      return { currentWeatherData };
-    } catch (error) {
-      console.error("No Data Found");
-      throw error;
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+       handleSearch();
     }
   };
+   
   const handleSearch = async () => {
     if (searchCity.trim() === "") {
       return;
@@ -81,16 +43,17 @@ const DisplayWeather = () => {
     }
   };
 
-  const formatSunsetTime = (timestamp: number): string => {
-    const date = new Date(timestamp * 1000);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-  
-    // Adicione um zero à esquerda se os minutos forem menores que 10
-    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-  
-    return `${hours}:${formattedMinutes}`;
-  };
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      Promise.all([fetchCurrentWeather(latitude, longitude)]).then(
+        ([currentWeather]) => {
+          setWeatherData(currentWeather);
+          setIsLoading(true);
+        }
+      );
+    });
+  }, []);
 
   const iconChanger = (weather: string) => {
     let iconElement: React.ReactNode;
@@ -119,26 +82,13 @@ const DisplayWeather = () => {
         iconElement = <TiWeatherPartlySunny />;
         iconColor = "#7B2869";
     }
-    
+
     return (
       <span className={styles.icon} style={{ color: iconColor }}>
         {iconElement}
       </span>
     );
   };
-
-  React.useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      Promise.all([fetchCurrentWeather(latitude, longitude)]).then(
-        ([currentWeather]) => {
-          setWeatherData(currentWeather);
-          setIsLoading(true);
-          console.log(currentWeather);
-        }
-      );
-    });
-  }, []);
 
   return (
     <main className={styles.main}>
@@ -148,6 +98,7 @@ const DisplayWeather = () => {
           placeholder="Enter a City"
           value={searchCity}
           onChange={(e) => setSearchCity(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
 
         <div className={styles.searchCircle}>
@@ -167,9 +118,7 @@ const DisplayWeather = () => {
             <h2>{weatherData.weather[0].main}</h2>
           </div>
 
-
           <div className={styles.bottomInfoArea}>
-
             <div className={styles.humidityLevel}>
               <WiHumidity className={styles.windIcon} />
               <div className={styles.humidInfo}>
@@ -194,7 +143,6 @@ const DisplayWeather = () => {
               </div>
             </div>
 
-
             <div className={styles.pressure}>
               <FiArrowRightCircle className={styles.windIcon} />
               <div className={styles.humidInfo}>
@@ -202,14 +150,12 @@ const DisplayWeather = () => {
                 <p>Pressure</p>
               </div>
             </div>
-
-
           </div>
         </>
       ) : (
         <div className={styles.loading}>
           <RiLoaderFill className={styles.loadingIcon} />
-          <p>Loading</p>
+          <p>Loading...</p>
         </div>
       )}
     </main>
