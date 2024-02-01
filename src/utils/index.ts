@@ -1,8 +1,8 @@
 import axios from "axios";
 import { WeatherDataProps } from "../types/index"
 
-const api_key = process.env.REACT_APP_API_KEY;
-const api_Endpoint = process.env.REACT_APP_API_ENDPOINT;
+const api_key = "228cfefac5b85af9fc76719bc59ef9cd"
+const api_Endpoint = "https://api.openweathermap.org/data/2.5/"
 
 export const fetchCurrentWeather = async (lat: number, lon: number) => {
   const url = `${api_Endpoint}weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric`;

@@ -39,7 +39,7 @@ const DisplayWeather = () => {
       const { currentWeatherData } = await fetchWeatherData(searchCity);
       setWeatherData(currentWeatherData);
     } catch (error) {
-      console.error("No Results Found");
+      window.alert("City not found. Please enter a valid city name.");
     }
   };
 
